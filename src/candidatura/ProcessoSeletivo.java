@@ -1,11 +1,31 @@
 package candidatura;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ProcessoSeletivo {
     public static void main(String[] args) {
         //selecaoCandadatos(); //puxa o método selecaoCandadatos
-        imprimirSelecionados();
+        //imprimirSelecionados(); //puxa o método imprimirSelecionados
+
+        String [] candidatos = {"FABRICIO", "MONICA", "MIRELA", "DANIELA", "JORGE"};
+        for(String candidato: candidatos){
+
         }
+    }
+    static void entrandoEmContato(String candidato){
+        int tentativasRealizadas =1;
+        boolean continuarTentando = true;
+        boolean atendeu = false;
+        do{
+
+        }while(continuarTentando && tentativasRealizadas <3);
+    }
+
+    //Método auxilixar
+    static boolean atender(){
+        return new Random().nextInt(3)==1;
+    }
+
     static void imprimirSelecionados() {
         String [] candidatos = {"FABRICIO", "MONICA", "MIRELA", "DANIELA", "JORGE"};
         System.out.println("Imprimindo a lista de candidatos informando o indice do elemento");
@@ -18,7 +38,8 @@ public class ProcessoSeletivo {
     }
     static void selecaoCandadatos(){
 
-        String [] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUTOS", "FABRICIO", "MONICA", "MIRELA", "DANIELA", "JORGE"};
+        String [] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUTOS", "FABRICIO", "MONICA",
+                "MIRELA", "DANIELA", "JORGE"};
 
         int candidatosSelecionado = 0;
         int candidatosAtual = 0;
