@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ProcessoSeletivo {
     public static void main(String[] args) {
-        //selecaoCandadatos(); //puxa o método selecaoCandadatos
+        selecaoCandadatos(); //puxa o método selecaoCandadatos
         //imprimirSelecionados(); //puxa o método imprimirSelecionados
 
         String [] candidatos = {"FABRICIO", "MONICA", "MIRELA", "DANIELA", "JORGE"};
@@ -17,8 +17,17 @@ public class ProcessoSeletivo {
         boolean continuarTentando = true;
         boolean atendeu = false;
         do{
-
+            atendeu = atender();
+            continuarTentando = !atendeu;
+            if(continuarTentando)
+                tentativasRealizadas++;
+            else
+                System.out.println("Contato Realizado com Sucesso");
         }while(continuarTentando && tentativasRealizadas <3);
+        if(atendeu)
+            System.out.println("Conseguimos Contato com " + candidato + "NA" + tentativasRealizadas + "Tentativa");
+        else
+            System.out.println("Não Conseguimos Contato com " + candidato + ", Numero maximo tentativas "+ tentativasRealizadas);
     }
 
     //Método auxilixar
